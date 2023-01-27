@@ -1,0 +1,46 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>Página Inicial</title>
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" type="text/css" href="../../static/css/index.css">
+{% endblock %}
+
+{% block body %}
+
+    <!--..................................................... 1 .....................................................-->
+    {% if request.user.is_anonymous == True %}
+        <div class="container mt-5 text-center">
+            <h2 class="text-secondary">Você está anônimo</h2>
+            <hr class="hr-custom-not-logged">
+            <p class="text-secondary">Para acessar o site, crie uma conta.</p>
+
+            <div>
+                <!--............................................... 2 ...............................................-->
+                <a class="btn btn-primary" href="{% url 'sign-up' %}">Criar conta</a>
+                <!--.............................................. /2 ..............................................-->
+
+                <!--............................................... 4 ...............................................-->
+                <a class="btn btn-success" href="{% url 'sign-in' %}">Entrar/Login</a>
+                <!--............................................... 4 ...............................................-->
+            </div>
+        </div>
+    {% else %}
+        <div class="container mt-2">
+            <span class="btn btn-dark">{{ user }}</span>
+
+            <!--................................................. 3 .................................................-->
+            <span><a class="btn btn-danger" href="{% url 'sign-out' %}">Sair/Logout</a></span>
+            <!--................................................ /3 ................................................-->
+
+        </div>
+    {% endif %}
+    <!--.................................................... /1 ....................................................-->
+
+
+    <script type="text/javascript" src="../../static/js/index.js"></script>
+{% endblock %}
