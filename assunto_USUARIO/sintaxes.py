@@ -2,6 +2,7 @@
 
 """
 * Sintaxe baseada em "class based views" mais comuns p/ usuário, que podem ser passadas p/ "get_context_data"
+* Essas sintaxes podem ser passadas diretamente no template sem "self"
 
 self.request.user
 self.request.user.is_anonymous

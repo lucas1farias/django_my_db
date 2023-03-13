@@ -14,7 +14,11 @@
     new_noun.save()
     nouns                               ----------> <QuerySet [<Nouns: dog>]>
     dog_obj_filtered = Nouns.objects.filter(name='dog')
-    dog_obj_filtered                    ----------> <QuerySet [<Nouns: dog>], <Nouns: dog>]>
+    dog_obj_filtered                    ----------> <QuerySet [<Nouns: dog>, <Nouns: dog>]>
     dog_obj_filtered[0].name            ----------> 'dog'
     dog_obj_filtered[1].translation     ----------> 'cachorro'
+    dog_obj_filtered.first()            ----------> <Nouns: dog>
+    dog_obj_filtered.last()             ----------> <Nouns: dog>
+    dog_obj_filtered.first().name       ----------> 'dog'
+    dog_obj_filtered.last().translation ----------> 'cachorro'
 """

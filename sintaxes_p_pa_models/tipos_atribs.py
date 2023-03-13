@@ -1,13 +1,15 @@
 
 
-"""
-* Consultar todos os campos disponíveis p/ modelos Django
-
+def como_consultar():
+    """
     python manage.py shell
     from django.db import models
     dir(models.Model)
+    """
 
-    # TODOS
+
+def retorno():
+    """
     (
         'Aggregate', 'AutoField', 'Avg', 'BLANK_CHOICE_DASH', 'BigAutoField', 'BigIntegerField', 'BinaryField',
         'BooleanField', 'CASCADE', 'Case', 'CharField', 'CheckConstraint', 'Choices', 'CommaSeparatedIntegerField',
@@ -27,8 +29,11 @@
         'fields_all', 'functions', 'indexes', 'indexes_all', 'lookups', 'manager', 'options',
         'prefetch_related_objects', 'query', 'query_utils', 'signals', 'sql', 'utils'
     )
+    """
 
-    # PRINCIPAIS
+
+def atribs_comuns():
+    """
     (
         'AutoField', 'BigAutoField', 'BigIntegerField', 'BinaryField', 'BooleanField', 'CharField',
         'CommaSeparatedIntegerField', 'DateField', 'DateTimeField', 'DecimalField', 'DurationField', 'EmailField',
@@ -37,7 +42,4 @@
         'PositiveIntegerField', 'PositiveSmallIntegerField', 'SlugField', 'SmallAutoField', 'SmallIntegerField',
         'TextField', 'TimeField', 'URLField', 'UUIDField'
     )
-
-    # RELACIONAMENTO
-    ('ForeignKey')
-"""
+    """

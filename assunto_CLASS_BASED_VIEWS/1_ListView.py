@@ -7,6 +7,8 @@
 * Pela var de classe "context_object_name" é preciso fazer coisas, como:
     {% if user_tasks|length == 0 %} {% endif %}
     {% for task in user_tasks %} {% endfor %}
+* Além do objeto de contexto, nesse tipo de view é apropriado as vars de classe "ordering" e "paginate_by"
+* Elas ajudam na configuração de templates ligados a essa view, SE no template há paginação incluída
 
 from django.views.generic import ListView
 from .models import *

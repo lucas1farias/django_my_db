@@ -60,7 +60,7 @@ def pa_urls():
     """
     from django.contrib.auth import views (aula 107) (36:50)
     from django.urls import path
-    from django.urls import re_path
+    from django.urls import re_path (aula 88 / 04:55)
     """
 
 
@@ -121,14 +121,32 @@ def usar_em_python():
 # TODO: Programação Web com Python e Django framework: Essencial
 def consumers():
     """
-    10:Trabalhando com Aplicações em Tempo Real - 91. Criando o consumer - [ 00:40 ]
+    Curso  || Programação Web com Python e Django framework: Essencial
+    Seção  || 10: Trabalhando com Aplicações em Tempo Real
+    Aula   || 91. Criando o consumer
+    Tempo  || 00:40 adiante
+
     from channels.generic.websocket import AsyncWebsocketConsumer
     """
 
 
 def pp_routing():
     """
-    from channels.auth import AuthMiddlewareStack
-    from channels.routing import ProtocolTypeRouter
-    from channels.routing import URLRouter
+    from channels.auth import AuthMiddlewareStack   (Aula 88)
+    from channels.routing import ProtocolTypeRouter (Aula 88)
+    from channels.routing import URLRouter          (Aula 88)
+    """
+
+
+def outros():
+    """
+    # Importações Python usadas em projetos Django
+        from textblob import TextBlob
+        from pprint import pprint
+        from uuid import uuid4
+
+    # Importações não relacionadas com Python
+        from chartjs.views.lines import BaseLineChartView (aula 101)
+        from reportlab.pdfgen import canvas (aula 105)
+        from weasyprint import HTML (aula 105)
     """
